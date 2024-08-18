@@ -59,12 +59,9 @@ data = BeautifulSoup(html_page, 'html.parser')
 ```
 
 # Analyze the webpage
-I open the web page in a browser and locate the required table by scrolling down to it. I enter the inspect panel by clicking fn + f12, then I search for 'td'
-[Image]
+I open the web page in a browser and locate the required table by scrolling down to it. I enter the inspect panel by clicking fn + f12, then I search for 'td'. 
 I notice that all rows under this table are mentioned as tr objects under the table. Clicking one of them would show that the data in each row is further saved as td object, as seen in the image below. I require the information under the first three headers of this stored data.
 It is also important to note that this is the first table on the page. I must identify the required table when extracting information.
-[Image]
-[Image]
 
 # Scraping of the required information
 I now need to write a loop to extract the appropriate information from the web page. The rows of the table needed can be accessed using the find_all() function with the BeautifulSoup object using the statements below.
